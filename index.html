@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta char="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Technical Documentation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+     
+    <nav id="navbar" >
+      <div class="menu">
+        <span  style="cursor:pointer" onclick="openNav()">
+            Navigation
+        </span> 
+      </div>
+      <div id="sidenav" class="sidenav">
+        <header>grid</header>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      
+          <ul class="nav-links">
+            <li><a class="nav-link" href="#grid">grid</a></li>
+            <li><a class="nav-link"  href="#grid-area">grid-area</a></li>
+            <li><a class="nav-link"  href="#grid-auto-columns">grid-auto-columns</a></li>
+            <li><a class="nav-link"  href="#grid-auto-flow">grid-auto-flow</a></li>
+            <li><a class="nav-link"  href="#grid-auto-rows">grid-auto-rows</a></li>
+            <li><a class="nav-link"  href="#grid-column">grid-column</a></li>
+            <li><a class="nav-link"  href="#grid-column-end">grid-column-end</a></li>
+            <li><a class="nav-link"  href="#grid-column-start">grid-column-start</a></li>
+            <li><a class="nav-link"  href="#grid-row">grid-row</a></li>
+            <li><a class="nav-link"  href="#grid-row-end">grid-row-end</a></li>
+            <li><a class="nav-link"  href="#grid-row-start">grid-row-start</a></li>
+            <li><a class="nav-link"  href="#grid-template">grid-template</a></li>
+            <li><a class="nav-link"  href="#grid-template-areas">grid-template-areas</a></li>
+            <li><a class="nav-link"  href="#grid-template-columns">grid-template-columns</a></li>
+            <li><a class="nav-link"  href="#grid-template-rows">grid-template-rows</a></li>
+            <li><a class="nav-link"  href="#reference">reference</a></li>
+          <ul>
+        </div>
+    </nav>
+    <main id="main-doc">
+      <section id="grid" class="main-section">
+        <header>grid
+        </header>
+        <p>The <code>grid</code> CSS property is a shorthand property that sets all of the explicit and implicit grid properties in a single declaration.</p>
+        <p>
+          Using <code>grid</code> you specify one axis using <code>grid-template-rows</code> or <code>grid-template-columns</code>, you then specify how content should auto-repeat in the other axis using the implicit grid properties: <code>grid-auto-rows</code>, <code>grid-auto-columns</code>, and <code>grid-auto-flow</code>.
+        </p>
+        <h4>Syntax</h4>
+        <div class="code">
+          <code>grid: 100px / 200px;</code>
+            <code>            
+            grid: 200px / auto-flow;<br>
+            grid: 30% / auto-flow dense;
+            </code>
+            
+            <code>
+              grid: auto-flow / 200px;<br>
+              grid: auto-flow dense / 30%;
+          </code>
+          <div>
+          <h5>
+            Constituent properties
+          </h5>
+          <p>
+            This property is a shorthand for the following CSS properties:
+          </p>
+          <ul>
+            <li><a href=""><code>grid-auto-columns</code></a></li>
+            <li><a href=""><code>grid-auto-flow</code></a></li>
+            <li><a href=""><code>grid-auto-rows</code></a></li>
+            <li><a href=""><code>grid-template-areas</code></a></li>
+            <li><a href=""><code>grid-template-columns</code></a></li>
+            <li><a href=""><code>grid-template-rows</code></a></li>
+          </ul>
+      </section>
+      <section id="grid-area" class="main-section">
+        <header>grid-area</header>
+        <p>The <code>grid-area</code> CSS shorthand property specifies a grid item's size and location within a grid by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the edges of its grid area.</p>
+        
+        <h4>Syntax</h4>
+        <p>
+          If four <code><grid-line></code> values are specified, <code>grid-row-start</code> is set to the first value, <code>grid-column-start</code> is set to the second value, <code>grid-row-end</code> is set to the third value, and <code>grid-column-end</code> is set to the fourth value.
+        </p>
+        <code>
+          grid-area: 2 / 1 / 2/ 4;
+        </code>
+      </section>
+      <section id="grid-auto-columns" class="main-section">
+        <header>grid-auto-columns</header>
+        <p>The <code>grid-auto-columns</code> CSS property specifies the size of an implicitly-created grid column track or pattern of tracks.</p>
+        <h4>Syntax</h4>
+        <div class="code">
+          <code>grid-auto-columns: auto;</code>
+          <code>grid-auto-columns: 1fr;</code>
+          <code>grid-auto-columns: min-content;</code>
+          <code>grid-auto-columns: minmax(10px, auto);</code>
+        <div>
+      </section>
+      <section id="grid-auto-flow" class="main-section">
+        <header>grid-auto-flow</header>
+        <p>The <code class="inline">grid-auto-flow</code> CSS property controls how the auto-placement algorithm works, specifying exactly how auto-placed items get flowed into the grid.</p>
+        <h4>Syntax</h4>
+        <p>This property may take one of two forms:</p>
+        <ul>
+          <li>a single keyword: one of <code class="inline">row</code>, <code class="inline">column</code> or <code>dense.</code></li>
+          <li>two keywords:<code  class="inline">row dense</code> or <code class="inline">column dense</code></li>
+        </ul>
+        <div class="code">
+          <code>grid-auto-flow: row;</code>
+          <code>grid-auto-flow: column;</code>
+          <code>grid-auto-flow: row dense;</code>
+        <div>
+      </section>
+      <section id="grid-auto-rows" class="main-section">
+        <header>grid-auto-rows</header>    
+        <p>The <code>grid-auto-rows</code> CSS property specifies the size of an implicitly-created grid row track or pattern of tracks.</p>
+        <h4>Syntax</h4>
+        <div class="code">
+          <code>grid-auto-rows: auto;</code>
+          <code>grid-auto-rows: 50px;</code>
+          <code>grid-auto-rows: min-content;</code>
+          <code>grid-auto-rows: minmax(30px, auto);</code>
+        <div>
+      </section>
+      <section id="grid-column" class="main-section">
+        <header>grid-column</header>
+        <p>The <code>grid-column</code> CSS shorthand property specifies a grid item's size and location within a grid column by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the inline-start and inline-end edge of its grid area.</p>
+        <p></p>
+        <h4>Syntax</h4>
+        <p>This property is specified as one or two <code><grid-line></code> values.</p>
+        <p>If two <code><grid-line></code> values are given, they are separated by <code>/</code>. The <code>grid-column-start</code> longhand is set to the value before the slash, and the <code>grid-column-end</code> longhand is set to the value after the slash.</p> 
+        <div class="code">
+          <code>grid-column: 1;</code>
+          <code>grid-column: 1 / 3;</code>
+          <code>grid-column: 2 / -1;</code>
+          <code>grid-column: 1 / span 2;</code>
+        <div>
+      </section>
+      <section id="grid-column-end" class="main-section">
+        <header>grid-column-end</header>
+        <p>The <code>grid-column-end</code> CSS property specifies a grid item's end position within the grid column by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the block-end edge of its grid area.</p>
+        
+        <h4>Syntax</h4>
+        <div class="code">
+          <code>grid-column-end: auto;</code>
+          <code>grid-column-end: 3;</code>
+          <code>grid-column-end: -1;</code>
+          <code>grid-column-end: span 3;</code>
+        <div>
+      </section>
+      <section id="grid-column-start" class="main-section">
+        <header>grid-column-start</header>
+        <p>The <code>grid-column-start</code> CSS property specifies a grid item's start position within the grid column by contributing a line, a span, or nothing (automatic) to its grid placement. This start position defines the block-start edge of the grid area.</p>
+        <p></p>
+        <h4>Syntax</h4>
+        <div class="code">
+          <code>grid-column-start: auto;</code>
+          <code>grid-column-start: 2;</code>
+          <code>grid-column-start: -1;</code>
+          <code>grid-column-start: span 2;</code>
+        <div>
+      </section>
+      <section id="grid-row" class="main-section">
+        <header>grid-row</header>
+        <p>The <code>grid-row</code> CSS shorthand property specifies a grid item's size and location within a grid row by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the inline-start and inline-end edge of its grid area.</p>
+        
+        <h4>Syntax</h4>
+        <p>This property is specified as one or two <grid-line> values.</p>
+        <p>f two <grid-line> values are given, they are separated by <code>/</code>. The <code>grid-row-start</code> longhand is set to the value before the slash, and the <code>grid-row-end</code> longhand is set to the value after the slash.</p>
+        <div class="code">
+          <code>grid-row: 1;</code>
+          <code>grid-row: 1 / 3;</code>
+          <code>grid-row: 2 / -1;</code>
+          <code>grid-row: 1 / span 2;</code>
+        <div>
+
+      </section>
+      <section id="grid-row-end" class="main-section">
+        <header>grid-row-end</header>
+        <p>The <code>grid-row-end</code> CSS property specifies a grid item's end position within the grid row by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the inline-end edge of its grid area.</p>
+        
+        <h4>Syntax</h4>
+        <div class="code">
+          <code>grid-row-end: auto;</code>
+          <code>grid-row-end: 3;</code>
+          <code>grid-row-end: -1;</code>
+          <code>grid-row-end: span 3;</code>
+        <div>
+        
+      </section>
+      <section id="grid-row-start" class="main-section">
+        <header>grid-row-start</header>
+        <p>The <code>grid-row-start</code> CSS property specifies a grid item's start position within the grid row by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the inline-start edge of its grid area.</p>
+        
+        <h4>Syntax</h4>
+        <div class="code">
+          <code>grid-row-start: auto;</code>
+          <code>grid-row-start: 3;</code>
+          <code>grid-row-start: -1;</code>
+          <code>grid-row-start: span 2;</code>
+        <div>
+      </section>
+      <section id="grid-template" class="main-section">
+        <header>grid-template</header>
+        <p>The <code>grid-template</code> CSS property is a shorthand property for defining grid columns, grid rows, and grid areas.</p>
+        <h3></h3>
+        <h4>Syntax</h4>
+        <code>grid-template: 
+                          "a a a" 40px<br>
+                          "b c c" 40px<br>
+                          "b c c" 40px / 1fr 1fr 1fr;</code>
+        
+        <h5>
+            Constituent properties
+          </h5>
+          <p>
+            This property is a shorthand for the following CSS properties:
+          </p>
+          <ul>
+            <li><a href=""><code>grid-template-areas</code></a></li>
+            <li><a href=""><code>grid-template-columns</code></a></li>
+            <li><a href=""><code>grid-template-rows</code></a></li>
+            
+          </ul>
+      </section>
+      <section id="grid-template-areas" class="main-section">
+        <header>grid-template-areas</header>
+        <p>The <code>grid-template-areas</code> CSS property specifies named grid areas, establishing the cells in the grid and assigning them names.</p>
+        <p></p>
+        <h4>Syntax</h4>
+        <div class="code">
+          <code>grid-template-areas:<br> 
+                            "a a a"<br>
+                            "b c c"<br>
+                            "b c c";</code>
+          <code>grid-template-areas:<br> 
+                            "a a ."<br>
+                            "b c ."<br>
+                            ". c c";</code>
+        <div>
+        
+      </section>
+      <section id="grid-template-columns" class="main-section">
+        <header>grid-template-columns</header>
+        <p>The <code>grid-template-columns</code> CSS property defines the line names and track sizing functions of the grid columns.</p>
+        <p></p>
+        <h4>Syntax</h4>
+        <div class="code">
+          <code>grid-template-columns: 60px 60px;</code>
+          <code>grid-template-columns: 1fr 60px;</code>
+          <code>grid-template-columns: 1fr 2fr;</code>
+          <code>grid-template-columns: 8ch auto;</code>
+        <div>
+      </section>
+      <section id="grid-template-rows" class="main-section">
+        <header>grid-template-rows</header>
+        <p>The <code>grid-template-rows</code> CSS property defines the line names and track sizing functions of the grid rows.</p>
+        <p></p>
+        <h4>Syntax</h4>
+        <div class="code">
+          <code>grid-template-rows: auto;</code> 
+          <code>grid-template-rows: 40px 4em 40px;</code> 
+          <code>grid-template-rows: 1fr 2fr 1fr;</code> 
+          <code>grid-template-rows: 3ch auto minmax;</code> 
+        <div>
+      </section>
+      <section id="reference" class="main-section">
+        <header>reference</header>
+        <p>This information is from <a class="site" href="#https://developer.mozilla.org/en-US/docs/Web/CSS/grid">MDN Web Docs</a> site.</p>
+      </section>
+    </main>
+  <script>
+function openNav() {
+  document.getElementById("sidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("sidenav").style.width = "0";
+}
+</script>
+  </body>
+</html>
